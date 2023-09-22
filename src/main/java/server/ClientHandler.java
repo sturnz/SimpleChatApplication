@@ -3,6 +3,9 @@ package server;
 import java.io.*;
 import java.net.Socket;
 
+/**
+ * This class is responsible for handling the communication between the chat server and an individual connected client.
+ */
 public class ClientHandler implements Runnable {
     private final ChatServer server;
     private final Socket     connectionToClient;

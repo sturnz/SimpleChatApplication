@@ -108,6 +108,10 @@ public class ChatClient extends JFrame implements KeyListener {
         new ChatClient(2710);
     }
 
+    /**
+     *
+     * @param e the event to be processed
+     */
     @Override
     public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() ==  KeyEvent.VK_ENTER) {
