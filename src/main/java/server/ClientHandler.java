@@ -4,7 +4,9 @@ import java.io.*;
 import java.net.Socket;
 
 /**
- * This class is responsible for handling the communication between the chat server and an individual connected client.
+ * Manages the communication between the chat server and an individual client. Handles reading messages from
+ * the client, broadcasting messages to all clients, and cleaning up resources when the client disconnects.
+ * Multiple instances of ClientHandler are created by the server to handle concurrent client connections.
  */
 public class ClientHandler implements Runnable {
     private final ChatServer server;

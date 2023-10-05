@@ -14,8 +14,8 @@ public class ChatServer {
     private List<ClientHandler> clients;
 
     /**
-     * Initializes the server by accepting incoming client connections on the specified port.
-     * For each client connection, it creates a ClientHandler and adds it to the clients list.
+     * <div>Initializes the server by accepting incoming client connections on the specified port.</div>
+     * <div>For each client connection, it creates a ClientHandler and adds it to the clients list.</div>
      * @param port Specified port number to accept incoming client connections
      */
     public ChatServer(int port) {

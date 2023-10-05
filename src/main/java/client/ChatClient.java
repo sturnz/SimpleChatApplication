@@ -7,6 +7,10 @@ import java.awt.event.KeyListener;
 import java.io.*;
 import java.net.Socket;
 
+/**
+ * <div>Allows users to connect to a chat server, send and receive messages.</div>
+ * <div>Displays the chat history in a graphical user interface (swing).</div>
+ */
 public class ChatClient extends JFrame implements KeyListener {
 
     private final int       port;
@@ -36,6 +40,10 @@ public class ChatClient extends JFrame implements KeyListener {
         }
     }
 
+    /**
+     * Sets up the client's connection to the server, initializes the GUI, and continuously receives and displays
+     * messages from the server.
+     */
     private void receiveMessage() {
         try {
             connectionToServer  = new Socket(address, port);
@@ -84,6 +92,10 @@ public class ChatClient extends JFrame implements KeyListener {
 
     /**
      * Sets attributes of the GUI, displaying the chat history and an input field for the user to type a message.
+     *  Creates and configures GUI components, including
+     *  <li>outputTextArea: a text area for displaying the chat history</li>
+     *  <li>inputTextField: a text field for entering messages</li>
+     *  <li>windowScrollPane: a vertical scrollbar</li>
      */
     private void initGui() {
         outputTextArea      = new JTextArea();
