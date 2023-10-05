@@ -37,11 +37,15 @@ public class ChatServer {
 
     /**
      * The entry point of the program.
-     * It creates an instance of ChatServer and starts the server on port 2710.
+     * It creates an instance of ChatServer and starts the server on specified port.
      * @param args Arguments
      */
     public static void main(String[] args) {
-        new ChatServer(2710);
+        if (args.length != 1) {
+            return;
+        }
+        int port = Integer.parseInt(args[0]);
+        new ChatServer(port);
     }
 
     /**
